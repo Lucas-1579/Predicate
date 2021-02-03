@@ -20,7 +20,7 @@ public class Program {
 		products.add(new Product("Mouse", 60.00));
 		products.add(new Product("KeyBoard", 90.00));
 		
-		products.removeIf(new ProductPredicate());
+		products.removeIf(Product::staticProductPredicate);
 		
 		products.forEach(pr -> System.out.println(pr));
 	}
