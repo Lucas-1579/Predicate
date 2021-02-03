@@ -20,9 +20,9 @@ public class Program {
 		products.add(new Product("Mouse", 60.00));
 		products.add(new Product("KeyBoard", 90.00));
 		
-		Predicate<Product> pred = x -> x.getPrice() >= 100;
 		
-		products.removeIf(pred);
+		
+		products.removeIf(x -> x.getPrice() >= 100);
 		
 		products.forEach(pr -> System.out.println(pr));
 	}
