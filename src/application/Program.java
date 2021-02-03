@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 
 import entitie.Product;
-import util.ProductPredicate;
 
 public class Program {
 
@@ -20,7 +19,7 @@ public class Program {
 		products.add(new Product("Mouse", 60.00));
 		products.add(new Product("KeyBoard", 90.00));
 		
-		products.removeIf(Product::staticProductPredicate);
+		products.removeIf(Product::nonStaticProductPredicate);
 		
 		products.forEach(pr -> System.out.println(pr));
 	}
